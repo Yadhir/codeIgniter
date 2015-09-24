@@ -18,8 +18,6 @@
             <li><a href="#">Gestionar Tipos de patrones</a></li>
           </ul>
 </div>
-
-
 <style type="text/css">
 	.sidebar{
 	position: fixed;
@@ -50,9 +48,6 @@
     display: block;
     padding: 10px 15px;
 }
-
 </style>
-	
-
 </body>
 </html>
