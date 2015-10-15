@@ -129,5 +129,27 @@ class Controlador_admInicio extends CI_Controller {
 		$this->load->view('Inicio/verPatron',$data);
 
 	}	
+	function eliminarPatron(){
+		$this->load->view('Inicio/admInicio');
+		
+		$data = array(
+			'enlaces'=>$this->usuario_model->verPatron()
+			);
+			$this->load->view('Inicio/eliminarPatron',$data);
+	}
+	function eliminar2(){
+		$idEliminar = $_POST['idEliminar'];
+		$nombrePatronEliminar = $_POST['nombrePatronEliminar'];
+		$descripcionEliminar = $_POST['descripcionEliminar'];
+		$result = $this->usuario_model->comparar($nombrePatronEliminar,$descripcionEliminar,$idEliminar);
+		if($result == 1){
+			$result2 = $this->usuario_model->eliminar($nombrePatronEliminar,$descripcionEliminar,$idEliminar);
+			redirect('Controlador_admInicio');
+		}else{
+			echo "son distintos";
+			
+		}
+
+}
 
 }
