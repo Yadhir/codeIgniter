@@ -40,7 +40,7 @@ $(document).ready(function(){
             
           </div>
 
-<form id="formModificar" name="formModificar" action="http://localhost/codeIgniter/index.php/Controlador_admInicio/modificar" method="POST" class="form-horizontal" role="formModificar">
+<form id="formModificar" name="formModificar" action="http://localhost:8080/codeIgniter/index.php/Controlador_admInicio/modificar" method="POST" class="form-horizontal" role="formModificar">
   <div class="form-group">
     <label for="modificar" class="col-lg-2 control-label">Nombre Familia</label>
     <div class="col-lg-10">

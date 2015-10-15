@@ -4,8 +4,8 @@
 	<title>	Ingresar a sistema</title>
 
 	
-	<link href="http://localhost/codeIgniter/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
-	<link href="http://localhost/codeIgniter/bootstrap/css/signin.css" rel="stylesheet"> 
+	<link href="http://localhost:8080/codeIgniter/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
+	<link href="http://localhost:8080/codeIgniter/bootstrap/css/signin.css" rel="stylesheet"> 
 	
 </head>
 <body>

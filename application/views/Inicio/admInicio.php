@@ -3,18 +3,18 @@
 <head>
 	<title>Admin</title>
 
-	<script src="http://localhost/codeIgniter/bootstrap/js/jquery.js"></script>
-	<link href="http://localhost/codeIgniter/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
-	<script src="http://localhost/codeIgniter/bootstrap/js/bootstrap.min.js"></script> 
-	<link href="http://localhost/codeIgniter/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet"> 
-	<link href="http://localhost/codeIgniter/bootstrap/css/sidebar.css" rel="stylesheet">
+	<script src="http://localhost:8080/codeIgniter/bootstrap/js/jquery.js"></script>
+	<link href="http://localhost:8080/codeIgniter/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
+	<script src="http://localhost:8080/codeIgniter/bootstrap/js/bootstrap.min.js"></script> 
+	<link href="http://localhost:8080/codeIgniter/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet"> 
+	<link href="http://localhost:8080/codeIgniter/bootstrap/css/sidebar.css" rel="stylesheet">
 </head>
 <body>
 <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
             <li class="active"><a href="#">Inicio <span class="sr-only">(current)</span></a></li>
-            <li><a href="http://localhost/codeIgniter/index.php/Controlador_admInicio/gestionarFamilia">Gestionar Familia Patrones</a></li>
-            <li><a href="http://localhost/codeIgniter/index.php/Controlador_admInicio/gestionarPatrones">Gestionar Patrones</a></li>
+            <li><a href="http://localhost:8080/codeIgniter/index.php/Controlador_admInicio/gestionarFamilia">Gestionar Familia Patrones</a></li>
+            <li><a href="http://localhost:8080/codeIgniter/index.php/Controlador_admInicio/gestionarPatrones">Gestionar Patrones</a></li>
             <li><a href="#">Gestionar Tipos de patrones</a></li>
           </ul>
 </div>

@@ -40,7 +40,7 @@ $(document).ready(function(){
             
           </div>
 
-<form id="formEliminar" name="formEliminar" action="http://localhost/codeIgniter/index.php/Controlador_admInicio/eliminar" method="POST" class="form-horizontal" role="formEliminar">
+<form id="formEliminar" name="formEliminar" action="http://localhost:8080/codeIgniter/index.php/Controlador_admInicio/eliminar" method="POST" class="form-horizontal" role="formEliminar">
   <div class="form-group">
     <label for="eliminar" class="col-lg-2 control-label">Nombre Familia</label>
     <div class="col-lg-10">
