@@ -37,3 +37,30 @@ $(document).ready(function(){
 </table>
 
 <div id="divForm" class="table-responsive">
+</div>
+
+<form id="formEliminar" name="formEliminar" action="http://localhost:8080/codeIgniter/index.php/Controlador_admInicio/eliminar" method="POST" class="form-horizontal" role="formEliminar">
+  <div class="form-group">
+    <label for="eliminar" class="col-lg-2 control-label">Nombre Patrón</label>
+    <div class="col-lg-10">
+      <input type="text" class="form-control" id="nombrePatronEliminar" name="nombrePatronEliminar" 
+             placeholder="Nombre Patrón" readonly="true">
+    </div>
+  </div>
+  <div class="form-group" class="col-lg-2">
+    <label for="eliminar" class="col-lg-2 control-label">Descripcion</label>
+    <div class="col-lg-10">
+      <input type="text" class="form-control" id="descripcionEliminar"  name="descripcionEliminar"
+             placeholder="Descripcion" readonly="true">
+    </div>
+  </div>
+
+   <div class="form-group" class="col-lg-2">
+    <label for="eliminar" class="col-lg-2 control-label">ID</label>
+    <div class="col-lg-10">
+      <input type="text" class="form-control" id="idEliminar"  name="idEliminar"
+             placeholder="ID" readonly="true"></input>
+    </div>
+  </div>
+
+  <p><input type="submit" name="btnEliminar" class="btn btn-success" id="btnEliminar" value="Eliminar"/></p>
