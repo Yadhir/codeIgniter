@@ -26,8 +26,18 @@ class Usuario_model extends CI_Model {
 		}
 	}
 
+	public function verPatron(){
+		$query = $this->db->query('SELECT idPatron,nombrePatron,descripcionPatron,nombre,idFamiliaForanea,fechaPatron FROM patron,familia where patron.idFamiliaForanea = familia.idFamilia ');
+		
+		if ($query->num_rows() > 0) {
+			return $query;
+		}else{
+			return false;
+		}
+	}
+
 	public function verFamilia(){
-		$query = $this->db->get('patron');
+		$query = $this->db->get('familia');
 		if ($query->num_rows() > 0) {
 			return $query;
 		}else{
@@ -35,7 +45,7 @@ class Usuario_model extends CI_Model {
 		}
 	}
 	public function guardar($data){
-		$this->db->insert('patron',$data);
+		$this->db->insert('familia',$data);
 		$num_inserts = $this->db->affected_rows();
 		if($num_inserts == 0){
 			return false;
@@ -45,16 +55,16 @@ class Usuario_model extends CI_Model {
 
 	}
 
-	public function modificar($nombre,$descripcion,$idPatron){
+	public function modificar($nombre,$descripcion,$idFamilia){
 		$data = array(
                'nombre' => $nombre,
                'descripcion' => $descripcion,
-               'idPatron' => $idPatron,
+               'idFamilia' => $idFamilia,
                "fecha"=> date('Y/m/d h:m')
             );
 
-		$this->db->where('idPatron', $idPatron);
-		$this->db->update('patron', $data);
+		$this->db->where('idFamilia', $idFamilia);
+		$this->db->update('familia', $data);
 		$num_update = $this->db->affected_rows();
 		if($num_update == 0){
 			return 0;
@@ -65,12 +75,11 @@ class Usuario_model extends CI_Model {
 	}
 	public function comparar($nombre,$descripcion,$id){
 
-		$this->db->where('idPatron',$id);
+		$this->db->where('idFamilia',$id);
 		$this->db->where('nombre',$nombre);
 		$this->db->where('descripcion',$descripcion);
-		$q = $this->db->get('patron');
+		$q = $this->db->get('familia');
 		if($q ->num_rows()>0){
-			
 			return 1;
 		}else{
 			
@@ -83,13 +92,13 @@ class Usuario_model extends CI_Model {
 		$data = array(
                'nombre' => $nombreFamiliaEliminar,
                'descripcion' => $descripcionEliminar,
-               'idPatron' => $idEliminar,
+               'idFamilia' => $idEliminar,
                "fecha"=> date('Y/m/d h:m')
             );
 
 		echo $idEliminar;
-		$this->db->where('idPatron', $idEliminar);
-		$this->db->delete('patron');
+		$this->db->where('idFamilia', $idEliminar);
+		$this->db->delete('familia');
 		$num_delete = $this->db->affected_rows();
 		if($num_delete == 0){
 			//echo $num_delete;

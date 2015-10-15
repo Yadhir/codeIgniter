@@ -13,11 +13,13 @@
 <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
             <li class="active"><a href="#">Inicio <span class="sr-only">(current)</span></a></li>
-            <li><a href="http://localhost/codeIgniter/index.php/Controlador_admInicio/hola">Gestionar Familia Patrones</a></li>
-            <li><a href="#">Gestionar Patrones</a></li>
+            <li><a href="http://localhost/codeIgniter/index.php/Controlador_admInicio/gestionarFamilia">Gestionar Familia Patrones</a></li>
+            <li><a href="http://localhost/codeIgniter/index.php/Controlador_admInicio/gestionarPatrones">Gestionar Patrones</a></li>
             <li><a href="#">Gestionar Tipos de patrones</a></li>
           </ul>
 </div>
+
+
 <style type="text/css">
 	.sidebar{
 	position: fixed;
@@ -48,6 +50,9 @@
     display: block;
     padding: 10px 15px;
 }
+
 </style>
+	
+
 </body>
 </html>

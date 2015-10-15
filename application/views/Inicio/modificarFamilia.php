@@ -30,7 +30,7 @@ $(document).ready(function(){
   <tbody>
     <?php 
         foreach ($enlaces->result() as $row) {
-          echo "<tr class='fila' id='fila_".$row->idPatron."'><td id='id_".$row->idPatron."'>".$row->idPatron."</td><td id='nombre_".$row->idPatron."'>".$row->nombre."</td><td id='descripcion".$row->idPatron."'>".$row->descripcion."</td><td>".$row->fecha."</td><td><button class='btn btn-default btn-xs botonModificar' id='botonModificarID_".$row->idPatron."'>Modificar</button></td></tr>";
+          echo "<tr class='fila' id='fila_".$row->idFamilia."'><td id='id_".$row->idFamilia."'>".$row->idFamilia."</td><td id='nombre_".$row->idFamilia."'>".$row->nombre."</td><td id='descripcion".$row->idFamilia."'>".$row->descripcion."</td><td>".$row->fecha."</td><td><button class='btn btn-default btn-xs botonModificar' id='botonModificarID_".$row->idFamilia."'>Modificar</button></td></tr>";
         }
       ?>
   </tbody>

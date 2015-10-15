@@ -15,21 +15,27 @@ $(document).ready(function(){
 </script>
 
 
-<h2 class="sub-header">Ver Familia</h2>
+<h2 class="sub-header">Ver patron</h2>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Id</th>
+      <th>Id Familia</th>
       <th>Familia</th>
-      <th>Fecha Ingreso </th>
+      <th>Id</th>
+      <th>Patron</th>
+      <th>Descripcion</th>
+      <th>Fecha</th>
+      
      
     </tr>
   </thead>
   <tbody>
     <?php 
-        foreach ($enlaces->result() as $row) {
-          echo "<tr class='fila' id='fila_".$row->idFamilia."'><td id='id_".$row->idFamilia."'>".$row->idFamilia."</td><td id='nombre_".$row->idFamilia."'>".$row->nombre."</td><td id='descripcion".$row->idFamilia."'>".$row->descripcion."</td><td>".$row->fecha."</td><td><button class='btn btn-default btn-xs botonModificar' id='botonModificarID_".$row->idFamilia."'>Ver Descripcion</button></td></tr>";
-        }
+
+          foreach ($enlaces->result() as $row) {
+            echo "<tr class='fila' id='fila_".$row->idPatron."'> <td id='id_".$row->idFamiliaForanea."'>".$row->idFamiliaForanea."</td> <td id='id_".$row->nombre."'>".$row->nombre."</td><td id='id_".$row->idPatron."'>".$row->idPatron."</td><td id='nombre_".$row->idPatron."'>".$row->nombrePatron."</td><td id='descripcion".$row->idPatron."'>".$row->descripcionPatron."</td><td>".$row->fechaPatron."</td><td><button class='btn btn-default btn-xs botonModificar' id='botonModificarID_".$row->idPatron."'>Ver Descripcion</button></td></tr>";
+          }
+        
       ?>
   </tbody>
 </table>
