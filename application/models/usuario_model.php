@@ -28,7 +28,6 @@ class Usuario_model extends CI_Model {
 
 	public function verPatron(){
 		$query = $this->db->query('SELECT idPatron,nombrePatron,descripcionPatron,nombre,idFamiliaForanea,fechaPatron FROM patron,familia where patron.idFamiliaForanea = familia.idFamilia ');
-		
 		if ($query->num_rows() > 0) {
 			return $query;
 		}else{

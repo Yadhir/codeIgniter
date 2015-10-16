@@ -20,17 +20,18 @@ $(document).ready(function(){
 <table class="table table-striped">
   <thead>
     <tr>
+      <th>Id Familia</th>
+      <th>Familia</th>
       <th>Id</th>
       <th>Patron</th>
-      <th>Descripción</th>
-      <th>Fecha Ingreso </th>
-      <th>Accion</th>
+      <th>Descripcion</th>
+      <th>Fecha</th>
     </tr>
   </thead>
   <tbody>
     <?php 
         foreach ($enlaces->result() as $row) {
-          echo "<tr class='fila' id='fila_".$row->idPatron."'><td id='id_".$row->idPatron."'>".$row->idPatron."</td><td id='nombre_".$row->idPatron."'>".$row->nombre."</td><td id='descripcion".$row->idPatron."'>".$row->descripcion."</td><td>".$row->fecha."</td><td><button class='btn btn-default btn-xs botonModificar' id='botonModificarID_".$row->idPatron."'>Eliminar</button></td></tr>";
+          echo "<tr class='fila' id='fila_".$row->idPatron."'><td id='id_".$row->idPatron."'>".$row->idPatron."</td><td id='nombre_".$row->idPatron."'>".$row->nombre."</td><td id='descripcion".$row->idPatron."'>".$row->descripcionPatron."</td><td>".$row->fechaPatron."</td><td><button class='btn btn-default btn-xs botonModificar' id='botonModificarID_".$row->idPatron."'>Eliminar</button></td></tr>";
         }
       ?>
   </tbody>
