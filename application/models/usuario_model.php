@@ -109,5 +109,42 @@ class Usuario_model extends CI_Model {
 
 	}
 
+	public function eliminar2($nombrePatronEliminar,$descripcionPatronEliminar,$idPatronEliminar){
+
+		$data = array(
+               'nombre' => $nombrePatronEliminar,
+               'descripcion' => $descripcionPatronEliminar,
+               'idFamilia' => $idPatronEliminar,
+               "fecha"=> date('Y/m/d h:m')
+            );
+
+		echo $idEliminar2;
+		$this->db->where('idPatron', $idPatronEliminar);
+		$this->db->delete('patron');
+		$num_delete = $this->db->affected_rows();
+		if($num_delete == 0){
+			//echo $num_delete;
+			return 0;
+		}else{
+			//echo $num_delete;
+			return 1;
+		}
+
+	}
+
+	public function comparar2($nombre,$descripcion,$id){
+
+		$this->db->where('idPatron',$id);
+		$this->db->where('nombrePatron',$nombre);
+		$this->db->where('descripcionPatron',$descripcion);
+		$q = $this->db->get('patron');
+		if($q ->num_rows()>0){
+			return 1;
+		}else{
+			
+			return 0;
+		}
+	}
+
 
 }

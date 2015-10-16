@@ -138,12 +138,12 @@ class Controlador_admInicio extends CI_Controller {
 			$this->load->view('Inicio/eliminarPatron',$data);
 	}
 	function eliminar2(){
-		$idEliminar = $_POST['idEliminar'];
+		$idPatronEliminar = $_POST['idPatronEliminar'];
 		$nombrePatronEliminar = $_POST['nombrePatronEliminar'];
-		$descripcionEliminar = $_POST['descripcionEliminar'];
-		$result = $this->usuario_model->comparar($nombrePatronEliminar,$descripcionEliminar,$idEliminar);
+		$descripcionPatronEliminar = $_POST['descripcionPatronEliminar'];
+		$result = $this->usuario_model->comparar2($nombrePatronEliminar,$descripcionPatronEliminar,$idPatronEliminar);
 		if($result == 1){
-			$result2 = $this->usuario_model->eliminar($nombrePatronEliminar,$descripcionEliminar,$idEliminar);
+			$result2 = $this->usuario_model->eliminar2($nombrePatronEliminar,$descripcionPatronEliminar,$idPatronEliminar);
 			redirect('Controlador_admInicio');
 		}else{
 			echo "son distintos";
