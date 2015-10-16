@@ -141,15 +141,71 @@ class Controlador_admInicio extends CI_Controller {
 		$idPatronEliminar = $_POST['idPatronEliminar'];
 		$nombrePatronEliminar = $_POST['nombrePatronEliminar'];
 		$descripcionPatronEliminar = $_POST['descripcionPatronEliminar'];
-		$result = $this->usuario_model->comparar2($nombrePatronEliminar,$descripcionPatronEliminar,$idPatronEliminar);
-		if($result == 1){
+		//$result = $this->usuario_model->comparar2($nombrePatronEliminar,$descripcionPatronEliminar,$idPatronEliminar);
+		//if($result == 1){
 			$result2 = $this->usuario_model->eliminar2($nombrePatronEliminar,$descripcionPatronEliminar,$idPatronEliminar);
 			redirect('Controlador_admInicio');
+		//}else{
+		//	echo "son distintos";
+			
+		//}
+
+	}
+
+	function modificarPatrona(){
+		$this->load->view('Inicio/admInicio');
+		
+		$data = array(
+			'enlaces'=>$this->usuario_model->verPatron()
+		);
+		$this->load->view('Inicio/modificarPatrones',$data);
+	}
+
+	// Realiza la consulta a la BD
+	function modificarPatron(){
+		$idPatron = $_POST['idMod'];
+		$nombrePatron = $_POST['nombrePatronMod'];
+		$descripcionPatron = $_POST['descripcionMod'];
+		$result = $this->usuario_model->compararPatron($nombrePatron,$descripcionPatron,$idPatron);
+		if($result == 1){
+			echo "son iguales";
 		}else{
 			echo "son distintos";
+			$result2 = $this->usuario_model->modificarPatron($nombrePatron,$descripcionPatron,$idPatron);
+			redirect('Controlador_admInicio');
+			//echo $result2;
+		}
+		
+	}
+	//parte del juan
+
+	// Carga el html al apretar el boton agregar
+	function agregarPatron(){
+		$this->load->view('Inicio/admInicio');
+		$this->load->view('Inicio/agregarPatrones');
+	}
+
+	// Realiza la consulta a la BD
+	function guardarPatron(){
+		$_POST['nombrePatron'];
+		$_POST['descripcionPatron'];
+		$_POST['idFamilia'];
+		$data = array(
+			"nombrePatron" => $this->input->post('nombrePatron'),
+			"descripcionPatron" => $this->input->post('descripcionPatron'),
+			"idFamiliaForanea" => $this->input->post('idFamilia'),
+			"fechaPatron"=> date('Y/m/d h:m')
+		);
+
+		$result = $this->usuario_model->guardar2patron($data);
+		if ($result) {
+			echo '<script language="javascript">alert("Exito");</script>';
+			redirect('Controlador_admInicio');
+		}else{
+			echo '<script language="javascript">alert("Fracaso");</script>';
 			
 		}
-
-}
+		
+	}	
 
 }

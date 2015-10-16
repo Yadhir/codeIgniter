@@ -40,7 +40,7 @@ $(document).ready(function(){
 <div id="divForm" class="table-responsive">
 </div>
 
-<form id="formEliminar2" name="formEliminar" action="http://localhost:8080/codeIgniter/index.php/Controlador_admInicio/eliminar2" method="POST" class="form-horizontal" role="formEliminar2">
+<form id="formEliminar2" name="formEliminar" action="http://localhost/codeIgniter/index.php/Controlador_admInicio/eliminar2" method="POST" class="form-horizontal" role="formEliminar2">
   <div class="form-group">
     <label for="eliminar2" class="col-lg-2 control-label">Nombre Patrón</label>
     <div class="col-lg-10">

@@ -1,5 +1,5 @@
 <h2 class="sub-header">Agregar Familia</h2>
-<form id="formAgregar" name="formAgregar" action="http://localhost:8080/codeIgniter/index.php/Controlador_admInicio/guardar" method="POST" class="form-horizontal" role="formAgregar">
+<form id="formAgregar" name="formAgregar" action="http://localhost/codeIgniter/index.php/Controlador_admInicio/guardar" method="POST" class="form-horizontal" role="formAgregar">
   <div class="form-group">
     <label for="agregar" class="col-lg-2 control-label">Nombre Familia</label>
     <div class="col-lg-4">

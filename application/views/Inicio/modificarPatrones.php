@@ -7,7 +7,7 @@
 $(document).ready(function(){
     $(".botonModificar").click(function(){
       var idObtenido = $(this).attr("id").split("_");
-        $("#nombreFamiliaMod").val($("#nombre_"+idObtenido[1]).text());
+        $("#nombrePatronMod").val($("#nombre_"+idObtenido[1]).text());
         $("#descripcionMod").val($("#descripcion"+idObtenido[1]).text());
         $("#idMod").val($("#id_"+idObtenido[1]).text());
     });
@@ -16,12 +16,12 @@ $(document).ready(function(){
 
 </script>
 
-<h2 class="sub-header">Modificar Familia</h2>
+<h2 class="sub-header">Modificar Patron</h2>
 <table class="table table-striped">
   <thead>
     <tr>
       <th>Id</th>
-      <th>Familia</th>
+      <th>Nombre Patron</th>
       <th>Descripcion</th>
       <th>Fecha Ingreso </th>
       <th>Seleccionar </th>
@@ -30,7 +30,7 @@ $(document).ready(function(){
   <tbody>
     <?php 
         foreach ($enlaces->result() as $row) {
-          echo "<tr class='fila' id='fila_".$row->idFamilia."'><td id='id_".$row->idFamilia."'>".$row->idFamilia."</td><td id='nombre_".$row->idFamilia."'>".$row->nombre."</td><td id='descripcion".$row->idFamilia."'>".$row->descripcion."</td><td>".$row->fecha."</td><td><button class='btn btn-default btn-xs botonModificar' id='botonModificarID_".$row->idFamilia."'>Modificar</button></td></tr>";
+          echo "<tr class='fila' id='fila_".$row->idPatron."'> <td id='id_".$row->idPatron."'>".$row->idPatron."</td><td id='nombre_".$row->idPatron."'>".$row->nombrePatron."</td><td id='descripcion".$row->idPatron."'>".$row->descripcionPatron."</td><td>".$row->fechaPatron."</td><td><button class='btn btn-default btn-xs botonModificar' id='botonModificarID_".$row->idPatron."'>Modificar</button></td></tr>";
         }
       ?>
   </tbody>
@@ -40,16 +40,16 @@ $(document).ready(function(){
             
           </div>
 
-<form id="formModificar" name="formModificar" action="http://localhost/codeIgniter/index.php/Controlador_admInicio/modificar" method="POST" class="form-horizontal" role="formModificar">
+<form id="formModificar" name="formModificar" action="http://localhost/codeIgniter/index.php/Controlador_admInicio/modificarPatron" method="POST" class="form-horizontal" role="formModificar">
   <div class="form-group">
-    <label for="modificar" class="col-lg-2 control-label">Nombre Familia</label>
+    <label for="modificarPatron" class="col-lg-2 control-label">Nombre Patron</label>
     <div class="col-lg-10">
-      <input type="text" class="form-control" id="nombreFamiliaMod" name="nombreFamiliaMod" 
-             placeholder="Nombre Familia">
+      <input type="text" class="form-control" id="nombrePatronMod" name="nombrePatronMod" 
+             placeholder="Nombre Patron">
     </div>
   </div>
   <div class="form-group" class="col-lg-2">
-    <label for="modificar" class="col-lg-2 control-label">Descripcion</label>
+    <label for="modificarPatron" class="col-lg-2 control-label">Descripcion</label>
     <div class="col-lg-10">
       <input type="text" class="form-control" id="descripcionMod"  name="descripcionMod"
              placeholder="Descripcion">
@@ -57,7 +57,7 @@ $(document).ready(function(){
   </div>
 
    <div class="form-group" class="col-lg-2">
-    <label for="modificar" class="col-lg-2 control-label">ID</label>
+    <label for="modificarPatron" class="col-lg-2 control-label">ID</label>
     <div class="col-lg-10">
       <input type="text" class="form-control" id="idMod"  name="idMod"
              placeholder="ID" readonly="true"></input>

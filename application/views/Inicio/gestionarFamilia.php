@@ -11,16 +11,16 @@ function cargar(div, desde)
 
           <div class="row placeholders">
             <div class="col-xs-6 col-sm-2 placeholder">
-              <button type="button" onclick="cargar('#divtest','http://localhost:8080/codeIgniter/index.php/Controlador_admInicio/verFamilia')" class="btn btn-success">Ver familia</button>
+              <button type="button" onclick="cargar('#divtest','http://localhost/codeIgniter/index.php/Controlador_admInicio/verFamilia')" class="btn btn-success">Ver familia</button>
             </div>
             <div class="col-xs-6 col-sm-2 placeholder">
-              <button type="button" onclick="cargar('#divtest','http://localhost:8080/codeIgniter/index.php/Controlador_admInicio/agregarFamilia')" class="btn btn-primary">Agregar familia</button>            
+              <button type="button" onclick="cargar('#divtest','http://localhost/codeIgniter/index.php/Controlador_admInicio/agregarFamilia')" class="btn btn-primary">Agregar familia</button>            
             </div>
             <div class="col-xs-6 col-sm-2 placeholder">
-              <button type="button" onclick="cargar('#divtest','http://localhost:8080/codeIgniter/index.php/Controlador_admInicio/modificarFamilia')" class="btn btn-warning">Modificar familia</button>            
+              <button type="button" onclick="cargar('#divtest','http://localhost/codeIgniter/index.php/Controlador_admInicio/modificarFamilia')" class="btn btn-warning">Modificar familia</button>            
             </div>
             <div class="col-xs-6 col-sm-2 placeholder">
-              <button type="button" onclick="cargar('#divtest','http://localhost:8080/codeIgniter/index.php/Controlador_admInicio/eliminarFamilia')" class="btn btn-danger">Eliminar familia</button>            
+              <button type="button" onclick="cargar('#divtest','http://localhost/codeIgniter/index.php/Controlador_admInicio/eliminarFamilia')" class="btn btn-danger">Eliminar familia</button>            
             </div>
           </div>
 

@@ -132,7 +132,41 @@ class Usuario_model extends CI_Model {
 
 	}
 
-	public function comparar2($nombre,$descripcion,$id){
+	/*public function comparar2($nombre,$descripcion,$id){
+
+		$this->db->where('idPatron',$id);
+		$this->db->where('nombrePatron',$nombre);
+		$this->db->where('descripcionPatron',$descripcion);
+		$q = $this->db->get('patron');
+		if($q ->num_rows()>0){
+			return 1;
+		}else{
+			
+			return 0;
+		}
+	}*/
+
+
+
+	public function modificarPatron($nombre,$descripcion,$idPatron){
+		$data = array(
+               'nombrePatron' => $nombre,
+               'descripcionPatron' => $descripcion,
+               'idPatron' => $idPatron,
+               "fechaPatron"=> date('Y/m/d h:m')
+            );
+
+		$this->db->where('idPatron', $idPatron);
+		$this->db->update('patron', $data);
+		$num_update = $this->db->affected_rows();
+		if($num_update == 0){
+			return 0;
+		}else{
+			return 1;
+		}
+
+	}
+	public function compararPatron($nombre,$descripcion,$id){
 
 		$this->db->where('idPatron',$id);
 		$this->db->where('nombrePatron',$nombre);
@@ -146,5 +180,14 @@ class Usuario_model extends CI_Model {
 		}
 	}
 
+	public function guardar2patron($data){
+		$this->db->insert('patron',$data);
+		$num_inserts = $this->db->affected_rows();
+		if($num_inserts == 0){
+			return false;
+		}else{
+			return true;
+		}
 
+	}
 }
