@@ -31,7 +31,7 @@ $(document).ready(function(){
   <tbody>
     <?php 
         foreach ($enlaces->result() as $row) {
-          echo "<tr class='fila' id='fila_".$row->idPatron."'><td id='id_".$row->idPatron."'>".$row->idPatron."</td><td id='nombre_".$row->idPatron."'>".$row->nombre."</td><td id='descripcion".$row->idPatron."'>".$row->descripcionPatron."</td><td>".$row->fechaPatron."</td><td><button class='btn btn-default btn-xs botonModificar' id='botonModificarID_".$row->idPatron."'>Eliminar</button></td></tr>";
+          echo "<tr class='fila' id='fila_".$row->idPatron."'> <td id='id_".$row->idFamiliaForanea."'>".$row->idFamiliaForanea."</td> <td id='id_".$row->nombre."'>".$row->nombre."</td><td id='id_".$row->idPatron."'>".$row->idPatron."</td><td id='nombre_".$row->idPatron."'>".$row->nombrePatron."</td><td id='descripcion".$row->idPatron."'>".$row->descripcionPatron."</td><td>".$row->fechaPatron."</td><td><button class='btn btn-default btn-xs botonModificar' id='botonModificarID_".$row->idPatron."'>Ver Descripcion</button></td></tr>";
         }
       ?>
   </tbody>
