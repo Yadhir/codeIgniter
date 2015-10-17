@@ -179,7 +179,7 @@ class Usuario_model extends CI_Model {
 			return 0;
 		}
 	}
-
+// juan
 	public function guardar2patron($data){
 		$this->db->insert('patron',$data);
 		$num_inserts = $this->db->affected_rows();
@@ -188,6 +188,6 @@ class Usuario_model extends CI_Model {
 		}else{
 			return true;
 		}
-
 	}
+
 }
