@@ -177,16 +177,15 @@ class Controlador_admInicio extends CI_Controller {
 		}
 		
 	}
-	//parte del juan
+	
 
-	// Carga el html al apretar el boton agregar
 	function agregarPatron(){
 		$this->load->view('Inicio/admInicio');
-		$this->load->view('Inicio/agregarPatrones');
+		$this->load->view('Inicio/agregarPatron');
 	}
 
-	// Realiza la consulta a la BD
-	function guardarPatron(){
+	
+function guardarPatron(){
 		$_POST['nombrePatron'];
 		$_POST['descripcionPatron'];
 		$_POST['idFamilia'];
@@ -200,12 +199,13 @@ class Controlador_admInicio extends CI_Controller {
 		$result = $this->usuario_model->guardar2patron($data);
 		if ($result) {
 			echo '<script language="javascript">alert("Exito");</script>';
-			redirect('Controlador_admInicio');
+			//redirect('Controlador_admInicio');
+			echo 'localhost:8888/codeIgniter/index.php/Controlador_admInicio';
 		}else{
 			echo '<script language="javascript">alert("Fracaso");</script>';
 			
 		}
 		
-	}	
+	}		
 
 }
