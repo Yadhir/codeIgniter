@@ -1,7 +1,7 @@
 <h2 class="sub-header">Agregar Patron</h2>
-<form id="formAgregar" name="formAgregar" action="http://localhost/codeIgniter/index.php/Controlador_admInicio/guardarPatron" method="POST" class="form-horizontal" role="formAgregar">
+<form id="formAgregar" name="formAgregar" action="http://localhost:8888/codeIgniter/index.php/Controlador_admInicio/guardarPatron" method="POST" class="form-horizontal" role="formAgregarPatron">
   <div class="form-group">
-    <label for="agregar" class="col-lg-2 control-label">Nombre Nuevo Patron</label>
+    <label for="agregar" class="col-lg-2 control-label">Nombre Patron</label>
     <div class="col-lg-4">
       <input type="text" class="form-control" id="nombrePatron" name='nombrePatron'
              placeholder="Nombre Patron">
@@ -15,9 +15,9 @@
              placeholder="Id Familia">
     </div>
   </div>
-
+  
   <div class="form-group" class="col-lg-2">
-    <label for="agregar" class="col-lg-2 control-label">Descripcion:</label>
+    <label for="agregar" class="col-lg-2 control-label">Descripcion del patron:</label>
     <div class="col-lg-4">
       <textarea class="form-control" rows="5" id="descripcionPatron" name="descripcionPatron"></textarea>
     </div>
@@ -30,5 +30,7 @@
     margin-left: 450px;
 
   }
+
+  </style>
 
   </style>
